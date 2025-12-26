@@ -1,0 +1,44 @@
+### Pistes d'Amélioration pour l'Atelier "MON GPS EMPLOI"
+
+Ce document récapitule les axes d'amélioration pour les ateliers "EMPLOI & RÉALITÉ" et "PROJET & IMMERSION", basés sur les profils des participantes.
+
+---
+### Axe 1 : La Simulation pour provoquer la prise de conscience (Pour les profils "hésitants" - Maria & Laëtitia) - NOUVELLE VERSION
+*Objectif : Amener la prise de conscience par la mise en situation plutôt que par le constat direct.*
+
+*   **Pour Maria (projet de création, non-véhiculée) :**
+    *   **Suggestion :** Après avoir identifié les défis logistiques sur la carte, proposer un jeu de rôle : "Je suis votre banquier. Convainquez-moi de financer votre projet. Comment comptez-vous transporter votre matériel chez vos clients ?"
+    *   **Intérêt :** La force à trouver elle-même des solutions (location, scooter, commencer localement) et la prépare aux vrais entretiens de financement.
+
+*   **Pour Laëtitia (hésite entre Cuisine et Formatrice) :**
+    *   **Suggestion :** Utiliser la métaphore des "deux portes". "Porte 1, 'Formatrice', est fermée à clé (nécessite une formation) avec peu de monde derrière. Porte 2, 'Cuisinier', est grande ouverte grâce à votre expérience, avec beaucoup d'opportunités. Laquelle choisissez-vous pour avancer dès demain ?"
+    *   **Intérêt :** L'aide à visualiser la situation et à prendre sa propre décision de manière stratégique et autonome.
+
+---
+### Axe 2 : L'Action Concrète (Pour les "demandeuses de stage" - Antifati, Yassamina, Virginie) - VERSION VALIDÉE
+*Objectif : Rendre la démarche de demande de stage (PMSMP) la plus concrète possible.*
+
+*   **Suggestion :** Ajouter une micro-activité : **"Le kit de demande de stage"**. Après le pitch, leur faire lister les 3 pièces nécessaires pour leur dossier :
+    1. Le CV (mis à jour).
+    2. Une trame de mail de motivation pour une PMSMP.
+    3. La convention de PMSMP (expliquer où la trouver).
+*   **Intérêt :** La participante repart avec une "liste de courses" claire, au-delà du simple pitch oral.
+
+---
+### Axe 3 : L'Autonomie Numérique (Pour Zalifa) - VERSION VALIDÉE
+*Objectif : Ancrer l'apprentissage numérique et obtenir une victoire concrète.*
+
+*   **Suggestion :** En plus de la session en binôme, lui faire créer son propre **"aide-mémoire" physique** avec les étapes apprises (ex: "1. Appui long pour copier..."). Viser l'envoi d'**une vraie candidature par mail** pendant la séance, avec votre aide.
+*   **Intérêt :** La création d'un support physique ancre l'apprentissage. L'envoi du mail constitue une réussite tangible et immédiate.
+
+---
+### Axe 4 : Le Témoignage "Expert" (Pour les plus autonomes - Fatima & Ewa) - NOUVELLE VERSION
+*Objectif : Valoriser leur avance en leur donnant un rôle d'experte ponctuel et structuré.*
+
+*   **Pour Ewa (l'experte mobilité) :**
+    *   **Suggestion :** Pendant l'étape sur la mobilité, la présenter comme l'experte du groupe : "Ewa, pourriez-vous nous partager en 2 minutes votre meilleure astuce pour organiser vos déplacements en voiture ?"
+    *   **Intérêt :** La positionne comme une ressource pour tout le groupe, valorise son expérience de manière formelle et donne des conseils pratiques à toutes.
+
+*   **Pour Fatima (la très autonome) :**
+    *   **Suggestion :** Au moment de cibler les entreprises, lui demander de partager une technique précise : "Fatima, quelle est votre technique pour trouver le nom du bon contact dans un hôtel avant de vous déplacer ?"
+    *   **Intérêt :** Met en avant une compétence avancée (la recherche d'information ciblée) et la fait partager au groupe comme un "secret de pro", ce qui est très valorisant pour elle et très utile pour les autres.

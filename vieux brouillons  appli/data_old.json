@@ -1,0 +1,71 @@
+{
+  "competences_cles": [
+    {
+      "id": "machine_expert",
+      "label": "Utiliser des machines (Monobrosse, Vapeur)",
+      "icone": "🚜",
+      "description": "Je sais conduire et entretenir le matériel mécanisé."
+    },
+    {
+      "id": "hygiene_strict",
+      "label": "Respecter des protocoles d'hygiène stricts",
+      "icone": "🏥",
+      "description": "Je sais doser les produits, désinfecter et respecter la marche en avant."
+    },
+    {
+      "id": "rapidite_detail",
+      "label": "Travailler vite avec le souci du détail",
+      "icone": "⚡",
+      "description": "Je suis efficace, je fais le lit au carré, je ne laisse aucune trace."
+    },
+    {
+      "id": "contact_humain",
+      "label": "Aider et être au contact des gens",
+      "icone": "🤝",
+      "description": "J'aime dire bonjour, rendre service, je suis discret(e) mais poli(e)."
+    },
+    {
+      "id": "permis_b",
+      "label": "J'ai le Permis B et un véhicule",
+      "icone": "🚗",
+      "description": "Je peux me déplacer d'un site à un autre."
+    }
+  ],
+  "metiers_cousins": [
+    {
+      "titre": "Agent de Service Hospitalier (ASH)",
+      "secteur": "Santé / EHPAD",
+      "match_competences": ["hygiene_strict", "contact_humain"],
+      "employeurs_types": ["Hôpital", "EHPAD", "Clinique"],
+      "argument_pitch": "Ma maîtrise des protocoles de désinfection stricts garantit la sécurité de vos patients."
+    },
+    {
+      "titre": "Femme / Valet de Chambre",
+      "secteur": "Hôtellerie / Tourisme",
+      "match_competences": ["rapidite_detail"],
+      "employeurs_types": ["Hôtel", "Camping", "Résidence de vacances", "Gîte"],
+      "argument_pitch": "Mon sens du détail et ma rapidité me permettent de garantir des chambres impeccables pour vos clients."
+    },
+    {
+      "titre": "Agent de Propreté Industrielle",
+      "secteur": "Industrie / Tertiaire",
+      "match_competences": ["machine_expert", "permis_b"],
+      "employeurs_types": ["Société de nettoyage", "Site industriel", "Entreprise de propreté"],
+      "argument_pitch": "Je suis mobile et je maîtrise déjà les machines industrielles (monobrosse), je suis opérationnel(le) tout de suite."
+    },
+    {
+      "titre": "Aide à Domicile (Entretien)",
+      "secteur": "Service à la personne",
+      "match_competences": ["contact_humain", "permis_b"],
+      "employeurs_types": ["Association aide à domicile", "Service à la personne", "CESU"],
+      "argument_pitch": "Au-delà du ménage, j'apporte une présence de confiance et je respecte l'intimité du domicile."
+    },
+    {
+      "titre": "Agent de Restauration Collective",
+      "secteur": "Restauration",
+      "match_competences": ["hygiene_strict", "rapidite_detail"],
+      "employeurs_types": ["Cantine scolaire", "Restaurant d'entreprise", "Restauration collective"],
+      "argument_pitch": "Je connais les normes d'hygiène (HACCP) et je sais travailler en équipe pendant le coup de feu."
+    }
+  ]
+}

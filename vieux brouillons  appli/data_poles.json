@@ -1,0 +1,236 @@
+{
+  "competences_poles": {
+    "Pôle Entretien & Propreté": [
+      {
+        "id": "protocoles_hygiene",
+        "label": "Appliquer les protocoles d'hygiène (Bio-nettoyage)",
+        "icone": "🧼",
+        "description": "Maîtrise des codes couleurs et dosages des produits pour éviter les contaminations."
+      },
+      {
+        "id": "machines_nettoyage",
+        "label": "Utiliser les machines (Monobrosse, Autolaveuse)",
+        "icone": "🚜",
+        "description": "Savoir monter, utiliser et entretenir le matériel mécanisé de nettoyage."
+      },
+      {
+        "id": "vitrerie",
+        "label": "Techniques de vitrerie et surfaces lisses",
+        "icone": "🪟",
+        "description": "Nettoyage sans traces à la raclette sur vitres et miroirs."
+      },
+      {
+        "id": "discretion_pro",
+        "label": "Discrétion et tenue professionnelle",
+        "icone": "🤫",
+        "description": "Respecter la confidentialité des lieux et l'intimité des usagers."
+      },
+      {
+        "id": "tri_dechets",
+        "label": "Gestion et tri sélectif des déchets",
+        "icone": "♻️",
+        "description": "Identifier et évacuer les déchets vers les bonnes filières."
+      }
+    ],
+    "Pôle BTP & Second Œuvre": [
+      {
+        "id": "peinture_finitions",
+        "label": "Travaux de peinture et finitions",
+        "icone": "🎨",
+        "description": "Préparation des supports (ponçage, enduit) et application soignée."
+      },
+      {
+        "id": "pose_revetement",
+        "label": "Pose de revêtements (Sol/Mur)",
+        "icone": "🧱",
+        "description": "Pose de faïence, parquet flottant ou papier peint avec raccords."
+      },
+      {
+        "id": "regles_securite",
+        "label": "Respect strict des règles de sécurité (EPI)",
+        "icone": "👷",
+        "description": "Port des EPI (casque, chaussures) et sécurisation du chantier."
+      },
+      {
+        "id": "montage_meubles",
+        "label": "Montage et assemblage d'éléments",
+        "icone": "🔩",
+        "description": "Lire une notice technique pour assembler du mobilier ou des structures."
+      },
+      {
+        "id": "plomberie_base",
+        "label": "Petite maintenance plomberie/électricité",
+        "icone": "🔧",
+        "description": "Changer un joint, une ampoule, refaire un joint silicone."
+      }
+    ],
+    "Pôle Ressourcerie & Vente": [
+      {
+        "id": "tri_valorisation",
+        "label": "Tri et valorisation des objets",
+        "icone": "🔍",
+        "description": "Diagnostiquer l'état d'un objet pour savoir s'il est vendable ou recyclable."
+      },
+      {
+        "id": "reparation_objet",
+        "label": "Petite réparation et nettoyage (Upcycling)",
+        "icone": "🔨",
+        "description": "Remettre en état de propreté et de fonctionnement un objet d'occasion."
+      },
+      {
+        "id": "accueil_client",
+        "label": "Accueil et conseil client en boutique",
+        "icone": "🤝",
+        "description": "Accueillir le public, renseigner sur les produits et l'éthique solidaire."
+      },
+      {
+        "id": "mise_en_rayon",
+        "label": "Merchandising et mise en rayon",
+        "icone": "👗",
+        "description": "Organiser les rayons pour rendre les produits attractifs (facing)."
+      },
+      {
+        "id": "tenue_caisse",
+        "label": "Encaissement et tenue de caisse",
+        "icone": "💶",
+        "description": "Gérer les transactions et compter le fond de caisse sans erreur."
+      }
+    ],
+    "Pôle Espaces Verts": [
+      {
+        "id": "taille_vegetaux",
+        "label": "Taille des arbustes et haies",
+        "icone": "✂️",
+        "description": "Utiliser un taille-haie ou un sécateur selon la saison et l'essence."
+      },
+      {
+        "id": "tonte_debroussaillage",
+        "label": "Tonte et débroussaillage",
+        "icone": "🌾",
+        "description": "Maniement de la tondeuse et de la débroussailleuse en sécurité."
+      },
+      {
+        "id": "entretien_outils",
+        "label": "Maintenance petit matériel thermique",
+        "icone": "⛽",
+        "description": "Graissage, niveau d'huile et nettoyage des outils après usage."
+      },
+      {
+        "id": "plantation",
+        "label": "Plantation et fleurissement",
+        "icone": "🌻",
+        "description": "Préparer le sol, planter et pailler massifs ou arbres."
+      },
+      {
+        "id": "souffleur",
+        "label": "Gestion des déchets verts (Souffleur)",
+        "icone": "🍃",
+        "description": "Ramassage des feuilles et évacuation propre du chantier."
+      }
+    ],
+    "Pôle Restauration & Snacking": [
+      {
+        "id": "haccp",
+        "label": "Normes d'hygiène alimentaire (HACCP)",
+        "icone": "🌡️",
+        "description": "Respect de la chaîne du froid, lavage des mains et dates limites (DLC)."
+      },
+      {
+        "id": "plonge",
+        "label": "Plonge batterie et vaisselle",
+        "icone": "🍽️",
+        "description": "Nettoyage rapide et organisé de la vaisselle en coup de feu."
+      },
+      {
+        "id": "prepa_froide",
+        "label": "Préparation froide (Sandwichs/Salades)",
+        "icone": "🥪",
+        "description": "Assemblage rapide et esthétique de produits snacking."
+      },
+      {
+        "id": "service_rapide",
+        "label": "Service au comptoir et fluidité",
+        "icone": "⏩",
+        "description": "Servir les commandes rapidement avec le sourire en période d'affluence."
+      },
+      {
+        "id": "nettoyage_cuisine",
+        "label": "Nettoyage et désinfection cuisine",
+        "icone": "🧽",
+        "description": "Remise en état impeccable du plan de travail en fin de service."
+      }
+    ]
+  },
+  "metiers_cousins": [
+    {
+      "titre": "Agent de Service Hospitalier (ASH)",
+      "secteur": "Santé / EHPAD",
+      "match_competences": [
+        "hygiene_strict",
+        "contact_humain"
+      ],
+      "employeurs_types": [
+        "Hôpital",
+        "EHPAD",
+        "Clinique"
+      ],
+      "argument_pitch": "Ma maîtrise des protocoles de désinfection stricts garantit la sécurité de vos patients."
+    },
+    {
+      "titre": "Femme / Valet de Chambre",
+      "secteur": "Hôtellerie / Tourisme",
+      "match_competences": [
+        "rapidite_detail"
+      ],
+      "employeurs_types": [
+        "Hôtel",
+        "Camping",
+        "Résidence de vacances",
+        "Gîte"
+      ],
+      "argument_pitch": "Mon sens du détail et ma rapidité me permettent de garantir des chambres impeccables pour vos clients."
+    },
+    {
+      "titre": "Agent de Propreté Industrielle",
+      "secteur": "Industrie / Tertiaire",
+      "match_competences": [
+        "machine_expert",
+        "permis_b"
+      ],
+      "employeurs_types": [
+        "Société de nettoyage",
+        "Site industriel",
+        "Entreprise de propreté"
+      ],
+      "argument_pitch": "Je suis mobile et je maîtrise déjà les machines industrielles (monobrosse), je suis opérationnel(le) tout de suite."
+    },
+    {
+      "titre": "Aide à Domicile (Entretien)",
+      "secteur": "Service à la personne",
+      "match_competences": [
+        "contact_humain",
+        "permis_b"
+      ],
+      "employeurs_types": [
+        "Association aide à domicile",
+        "Service à la personne",
+        "CESU"
+      ],
+      "argument_pitch": "Au-delà du ménage, j'apporte une présence de confiance et je respecte l'intimité du domicile."
+    },
+    {
+      "titre": "Agent de Restauration Collective",
+      "secteur": "Restauration",
+      "match_competences": [
+        "hygiene_strict",
+        "rapidite_detail"
+      ],
+      "employeurs_types": [
+        "Cantine scolaire",
+        "Restaurant d'entreprise",
+        "Restauration collective"
+      ],
+      "argument_pitch": "Je connais les normes d'hygiène (HACCP) et je sais travailler en équipe pendant le coup de feu."
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+/* styles.css - Fichier de style pour les documents Markdown */
+
+/* Style général du document */
+body {
+    font-family: 'Segoe UI', Calibri, 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+    margin: 0;
+    padding: 2em;
+    font-size: 12pt; /* Taille de police de base pour Word */
+}
+
+/* Titres */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Garamond', 'Times New Roman', serif;
+    color: #2c3e50; /* Bleu nuit */
+    line-height: 1.2;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+h1 {
+    font-size: 24pt;
+    border-bottom: 2px solid #3498db; /* Ligne bleue sous le titre principal */
+    padding-bottom: 0.3em;
+}
+
+h2 {
+    font-size: 20pt;
+    border-bottom: 1px solid #bdc3c7; /* Ligne grise plus discrète */
+    padding-bottom: 0.2em;
+}
+
+h3 {
+    font-size: 16pt;
+    color: #34495e; /* Gris-bleu un peu plus clair */
+}
+
+h4 {
+    font-size: 14pt;
+    font-style: italic;
+}
+
+/* Paragraphes */
+p {
+    margin-bottom: 1em;
+    text-align: justify; /* Justifier le texte pour un rendu plus "document" */
+}
+
+/* Listes */
+ul, ol {
+    padding-left: 2em;
+    margin-bottom: 1em;
+}
+
+li {
+    margin-bottom: 0.5em;
+}
+
+/* Liens */
+a {
+    color: #3498db; /* Bleu standard pour les liens */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Texte en gras et italique */
+strong, b {
+    font-weight: bold;
+}
+
+em, i {
+    font-style: italic;
+}
+
+/* Citations */
+blockquote {
+    background-color: #f9f9f9;
+    border-left: 5px solid #3498db; /* Barre bleue à gauche */
+    padding: 1em 1.5em;
+    margin: 1.5em 0;
+    color: #555;
+    font-style: italic;
+}
+
+/* Code (si on en utilise) */
+code {
+    font-family: 'Consolas', 'Courier New', monospace;
+    background-color: #ecf0f1; /* Fond gris très clair */
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-size: 0.9em;
+}

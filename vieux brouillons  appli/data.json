@@ -1,0 +1,143 @@
+{
+  "competences_cles": [
+    {
+      "id": "machine_expert",
+      "label": "Utiliser des machines (Monobrosse, Vapeur)",
+      "icone": "🚜",
+      "description": "Je sais conduire et entretenir le matériel mécanisé."
+    },
+    {
+      "id": "hygiene_strict",
+      "label": "Respecter des protocoles d'hygiène stricts",
+      "icone": "🏥",
+      "description": "Je sais doser les produits, désinfecter et respecter la marche en avant."
+    },
+    {
+      "id": "rapidite_detail",
+      "label": "Travailler vite avec le souci du détail",
+      "icone": "⚡",
+      "description": "Je suis efficace, je fais le lit au carré, je ne laisse aucune trace."
+    },
+    {
+      "id": "contact_humain",
+      "label": "Aider et être au contact des gens",
+      "icone": "🤝",
+      "description": "J'aime dire bonjour, rendre service, je suis discret(e) mais poli(e)."
+    },
+    {
+      "id": "permis_b",
+      "label": "J'ai le Permis B et un véhicule",
+      "icone": "🚗",
+      "description": "Je peux me déplacer d'un site à un autre."
+    },
+    {
+      "id": "ponctualite",
+      "label": "Je suis toujours à l'heure",
+      "icone": "⏰",
+      "description": "La ponctualité est ma priorité pour ne pas retarder l'équipe."
+    },
+    {
+      "id": "port_charges",
+      "label": "Je peux porter des charges lourdes",
+      "icone": "📦",
+      "description": "J'ai une bonne condition physique pour le port de matériel."
+    },
+    {
+      "id": "esprit_equipe",
+      "label": "J'aime travailler en équipe",
+      "icone": "🤝",
+      "description": "Je m'intègre facilement et j'aide mes collègues."
+    },
+    {
+      "id": "autonomie",
+      "label": "Je sais travailler seul(e)",
+      "icone": "🏃",
+      "description": "Je sais gérer mes tâches sans avoir besoin d'être surveillé(e)."
+    },
+    {
+      "id": "langues",
+      "label": "Je parle une autre langue (Anglais/Espagnol...)",
+      "icone": "🗣️",
+      "description": "Je peux orienter des clients étrangers basiquement."
+    },
+    {
+      "id": "gestion_stress",
+      "label": "Je garde mon calme sous la pression",
+      "icone": "🧘",
+      "description": "Même quand il y a du monde, je reste efficace."
+    },
+    {
+      "id": "produits_entretien",
+      "label": "Je connais les produits d'entretien",
+      "icone": "🧴",
+      "description": "Je sais quel produit utiliser pour chaque surface sans danger."
+    },
+    {
+      "id": "presentation",
+      "label": "J'ai une excellente présentation",
+      "icone": "👔",
+      "description": "Je suis toujours propre et soigné(e) face aux clients."
+    },
+    {
+      "id": "outils_numeriques",
+      "label": "Je suis à l'aise avec le numérique",
+      "icone": "📱",
+      "description": "Utiliser une tablette ou un smartphone pour le travail ne me fait pas peur."
+    },
+    {
+      "id": "discretion",
+      "label": "Je sais être discret(e)",
+      "icone": "🤫",
+      "description": "Je respecte l'intimité des clients et la confidentialité."
+    },
+    {
+      "id": "flexibilite_horaire",
+      "label": "Je suis flexible sur les horaires",
+      "icone": "📅",
+      "description": "Travailler le week-end ou tard le soir est possible pour moi."
+    },
+    {
+      "id": "memoire",
+      "label": "J'ai une bonne mémoire",
+      "icone": "🧠",
+      "description": "Je retiens les habitudes des clients ou les consignes rapidement."
+    }
+  ],
+  "metiers_cousins": [
+    {
+      "titre": "Agent de Service Hospitalier (ASH)",
+      "secteur": "Santé / EHPAD",
+      "match_competences": ["hygiene_strict", "contact_humain"],
+      "employeurs_types": ["Hôpital", "EHPAD", "Clinique"],
+      "argument_pitch": "Ma maîtrise des protocoles de désinfection stricts garantit la sécurité de vos patients."
+    },
+    {
+      "titre": "Femme / Valet de Chambre",
+      "secteur": "Hôtellerie / Tourisme",
+      "match_competences": ["rapidite_detail"],
+      "employeurs_types": ["Hôtel", "Camping", "Résidence de vacances", "Gîte"],
+      "argument_pitch": "Mon sens du détail et ma rapidité me permettent de garantir des chambres impeccables pour vos clients."
+    },
+    {
+      "titre": "Agent de Propreté Industrielle",
+      "secteur": "Industrie / Tertiaire",
+      "match_competences": ["machine_expert", "permis_b"],
+      "employeurs_types": ["Société de nettoyage", "Site industriel", "Entreprise de propreté"],
+      "argument_pitch": "Je suis mobile et je maîtrise déjà les machines industrielles (monobrosse), je suis opérationnel(le) tout de suite."
+    },
+    {
+      "titre": "Aide à Domicile (Entretien)",
+      "secteur": "Service à la personne",
+      "match_competences": ["contact_humain", "permis_b"],
+      "employeurs_types": ["Association aide à domicile", "Service à la personne", "CESU"],
+      "argument_pitch": "Au-delà du ménage, j'apporte une présence de confiance et je respecte l'intimité du domicile."
+    },
+    {
+      "titre": "Agent de Restauration Collective",
+      "secteur": "Restauration",
+      "match_competences": ["hygiene_strict", "rapidite_detail"],
+      "employeurs_types": ["Cantine scolaire", "Restaurant d'entreprise", "Restauration collective"],
+      "argument_pitch": "Je connais les normes d'hygiène (HACCP) et je sais travailler en équipe pendant le coup de feu."
+    }
+  ]
+}
