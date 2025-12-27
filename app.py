@@ -140,20 +140,23 @@ with st.container(border=True):
                 </div>
                 """, unsafe_allow_html=True)
                 
-                # Les boutons (avec le terme de recherche propre)
-                terme = details['search']
-                c1, c2, c3, c4 = st.columns(4)
-                
-                with c1:
-                    st.link_button("📍 Carte", f"https://www.google.com/maps/search/entreprise+{terme}+{ville}")
-                with c2:
-                    st.link_button("💼 Indeed", f"https://fr.indeed.com/emplois?q={terme}&l={ville}")
-                with c3:
-                    st.link_button("🇫🇷 Fr.Travail", f"https://candidat.francetravail.fr/offres/recherche?motsCles={terme}&lieux={ville}&rayon=10")
-                with c4:
-                    st.link_button("🔍 BonneBoîte", f"https://labonneboite.francetravail.fr/recherche?metier={terme}&lieu={ville}")
+             # Les boutons (avec le terme de recherche propre)
+        terme = details['search']
+        
+        # --- ETAPE DE NETTOYAGE POUR LE MOBILE ---
+        # On remplace les espaces par des "+" pour que le téléphone comprenne le lien
+        terme_url = terme.replace(" ", "+")
+        ville_url = ville.replace(" ", "+")
+        # -----------------------------------------
 
-    elif not ville and competences:
-        st.warning("⚠️ Merci d'indiquer une ville pour lancer l'analyse.")
-    elif ville and not competences:
-        st.info("👆 Sélectionnez vos compétences pour voir les métiers correspondants.")
+        c1, c2, c3, c4 = st.columns(4)
+        
+        with c1:
+            # J'ai corrigé le lien Google Maps pour utiliser le standard sécurisé (https)
+            st.link_button("📍 Carte", f"https://www.google.com/maps/search/{terme_url}+{ville_url}")
+        with c2:
+            st.link_button("💼 Indeed", f"https://fr.indeed.com/emplois?q={terme_url}&l={ville_url}")
+        with c3:
+            st.link_button("🇫🇷 Fr.Travail", f"https://candidat.francetravail.fr/offres/recherche?motsCles={terme_url}&lieux={ville_url}&rayon=10")
+        with c4:
+            st.link_button("🔍 BonneBoîte", f"https://labonneboite.francetravail.fr/recherche?metier={terme_url}&lieu={ville_url}")
