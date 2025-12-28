@@ -5,7 +5,7 @@ import streamlit as st
 # ==============================================================================
 st.set_page_config(
     page_title="Mon GPS Emploi",
-    page_icon="boussole_GPS_Emploi.jpg", # L'image de la boussole
+   page_icon="boussole_gps_emploi.jpg" , # L'image de la boussole
     layout="centered"
 )
 
