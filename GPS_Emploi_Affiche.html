@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MON GPS EMPLOI</title>
+    <style>
+        /* Configuration générale et FALC */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Conteneur principal format A4 */
+        .page-a4 {
+            width: 210mm;
+            height: 297mm;
+            max-height: 100vh;
+            background-color: #e0f7fa; /* Bleu ciel très clair */
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            box-sizing: border-box;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+
+        @media print {
+            body { background-color: white; }
+            .page-a4 {
+                box-shadow: none;
+                width: 100%;
+                height: 100%;
+                max-height: initial;
+            }
+            @page {
+                size: A4 portrait;
+                margin: 0;
+            }
+        }
+
+        /* Titre général */
+        .main-title {
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            color: #333;
+            padding-bottom: 15px;
+            flex-shrink: 0;
+        }
+
+        /* Conteneur de la route et des étapes */
+        .road-container {
+            flex-grow: 1;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        /* La route grise */
+        .road-path {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            background-color: #455a64; /* Gris */
+            z-index: 1;
+        }
+        /* Marquage au sol */
+        .road-path::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 100%;
+            width: 6px;
+            border-left: 6px dashed #ffeb3b; /* Jaune */
+        }
+
+        /* Style de base pour une étape */
+        .step {
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+            width: 45%;
+        }
+
+        .step.left {
+            align-self: flex-start;
+        }
+
+        .step.right {
+            align-self: flex-end;
+            flex-direction: row-reverse;
+        }
+
+        /* Bulle de texte */
+        .bubble {
+            background-color: white;
+            border-radius: 15px;
+            padding: 12px 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            flex-grow: 1;
+            text-align: center;
+        }
+        
+        .step.left .bubble { margin-left: 20px; }
+        .step.right .bubble { margin-right: 20px; }
+
+        .bubble span {
+            font-weight: bold;
+            display: block;
+        }
+
+        /* Icônes Emoji */
+        .emoji {
+            font-size: 32px;
+            background-color: white;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            flex-shrink: 0;
+        }
+
+        /* Étape 6 spécifique avec les cartes */
+        #step-6 {
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+        }
+        .cards-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 10px;
+            gap: 10px;
+        }
+        .card {
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            font-size: 13px;
+            flex: 1;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .card-indeed { background-color: #d4eaf7; border: 1px solid #a1c4e0; }
+        .card-ft { background-color: #d7f0e0; border: 1px solid #b3d9c1; }
+        .card-lbb { background-color: #fdebd0; border: 1px solid #f8c471; }
+
+        /* Pied de page */
+        .footer {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            padding-top: 15px;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-a4">
+
+        <div class="main-title">📍 MON GPS EMPLOI : Le chemin vers mon contrat</div>
+
+        <div class="road-container">
+            <div class="road-path"></div>
+
+            <div class="step left">
+                <div class="emoji">📱</div>
+                <div class="bubble"><span>J'ouvre l'appli</span> avec le QR Code.</div>
+            </div>
+
+            <div class="step right">
+                <div class="emoji">👷</div>
+                <div class="bubble"><span>Menu 1 :</span> Je choisis mon Pôle (Cuisine, Verts...).</div>
+            </div>
+
+            <div class="step left">
+                <div class="emoji">✅</div>
+                <div class="bubble"><span>Menu 2 :</span> Je coche TOUT ce que je sais faire.</div>
+            </div>
+
+            <div class="step right">
+                <div class="emoji">🏙️</div>
+                <div class="bubble"><span>Case 3 :</span> J'écris ma ville et je valide.</div>
+            </div>
+
+            <div class="step left">
+                <div class="emoji">🎯</div>
+                <div class="bubble"><span>RÉSULTAT :</span> L'appli me donne mon vrai Métier. Je retiens bien ce nom.</div>
+            </div>
+
+            <div id="step-6" class="step">
+                <div class="emoji">🌐</div>
+                <div class="cards-container">
+                    <div class="card card-indeed"><span>INDEED</span>Tout est déjà rempli !</div>
+                    <div class="card card-ft"><span>FRANCE TRAVAIL</span>Le métier est là. J'écris juste ma VILLE.</div>
+                    <div class="card card-lbb"><span>LA BONNE BOÎTE</span>J'écris le MÉTIER et ma VILLE.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">🏁 Bravo ! Vous êtes prêt à postuler.</div>
+
+    </div>
+</body>
+</html>

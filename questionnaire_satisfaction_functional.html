@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Avis - GPS Emploi</title>
+    <style>
+        body {
+            font-family: 'Verdana', sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            background: white;
+            max-width: 600px;
+            margin: 0 auto;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        h1 { color: #2c3e50; font-size: 24px; }
+        p { color: #555; font-size: 16px; margin-bottom: 30px; }
+        
+        .question-box {
+            background-color: #e8f6f3; /* Fond vert très clair */
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 25px;
+            border-left: 5px solid #1abc9c; /* Barre verte sur le côté */
+        }
+        .question-text {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+            display: block;
+        }
+        .smiley-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        /* Style des boutons Smileys */
+        .smiley-btn {
+            font-size: 35px;
+            background: none;
+            border: 2px solid #ddd;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative; /* Pour positionner le radio input */
+        }
+        /* Cache le radio input */
+        .smiley-btn input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+        /* Couleurs au survol et sélection */
+        .smiley-btn:hover { transform: scale(1.2); }
+        .happy:hover, .happy.selected { background-color: #d4edda; border-color: #28a745; }
+        .neutral:hover, .neutral.selected { background-color: #fff3cd; border-color: #ffc107; }
+        .sad:hover, .sad.selected { background-color: #f8d7da; border-color: #dc3545; }
+
+        .btn-envoyer {
+            background-color: #2980b9;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+        .btn-envoyer:hover { background-color: #1a5276; }
+
+        /* Message de fin caché au début */
+        #message-fin {
+            display: none;
+            color: #27ae60;
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>📝 DONNEZ VOTRE AVIS</h1>
+    <p>Merci de répondre à ces 4 petites questions pour nous aider.</p>
+
+    <form id="quizForm" onsubmit="envoyerAvis(event)">
+        
+        <div class="question-box">
+            <span class="question-text">1. Est-ce que l'application est facile à ouvrir ?</span>
+            <div class="smiley-container" data-question-name="q1_facilite_ouverture">
+                <label class="smiley-btn sad" tabindex="0">
+                    ☹️
+                    <input type="radio" name="facilite_ouverture" value="pas_facile">
+                </label>
+                <label class="smiley-btn neutral" tabindex="0">
+                    😐
+                    <input type="radio" name="facilite_ouverture" value="moyen">
+                </label>
+                <label class="smiley-btn happy" tabindex="0">
+                    😃
+                    <input type="radio" name="facilite_ouverture" value="facile">
+                </label>
+            </div>
+        </div>
+
+        <div class="question-box">
+            <span class="question-text">2. Avez-vous trouvé votre métier facilement ?</span>
+            <div class="smiley-container" data-question-name="q2_metier_facile">
+                <label class="smiley-btn sad" tabindex="0">
+                    ☹️
+                    <input type="radio" name="metier_facile" value="pas_facile">
+                </label>
+                <label class="smiley-btn neutral" tabindex="0">
+                    😐
+                    <input type="radio" name="metier_facile" value="moyen">
+                </label>
+                <label class="smiley-btn happy" tabindex="0">
+                    😃
+                    <input type="radio" name="metier_facile" value="facile">
+                </label>
+            </div>
+        </div>
+
+        <div class="question-box">
+            <span class="question-text">3. Est-ce que les boutons "Indeed" et "France Travail" aident ?</span>
+            <div class="smiley-container" data-question-name="q3_boutons_aident">
+                <label class="smiley-btn sad" tabindex="0">
+                    ☹️
+                    <input type="radio" name="boutons_aident" value="non">
+                </label>
+                <label class="smiley-btn neutral" tabindex="0">
+                    😐
+                    <input type="radio" name="boutons_aident" value="un_peu">
+                </label>
+                <label class="smiley-btn happy" tabindex="0">
+                    😃
+                    <input type="radio" name="boutons_aident" value="oui">
+                </label>
+            </div>
+        </div>
+
+        <div class="question-box">
+            <span class="question-text">4. Voulez-vous utiliser cet outil encore ?</span>
+            <div class="smiley-container" data-question-name="q4_utiliser_encore">
+                <label class="smiley-btn sad" tabindex="0">
+                    ☹️
+                    <input type="radio" name="utiliser_encore" value="non">
+                </label>
+                <label class="smiley-btn neutral" tabindex="0">
+                    😐
+                    <input type="radio" name="utiliser_encore" value="peut_etre">
+                </label>
+                <label class="smiley-btn happy" tabindex="0">
+                    😃
+                    <input type="radio" name="utiliser_encore" value="oui">
+                </label>
+            </div>
+        </div>
+
+        <button type="submit" class="btn-envoyer">ENVOYER MES RÉPONSES</button>
+    </form>
+
+    <div id="message-fin">
+        ✅ Merci beaucoup !<br>Votre avis compte pour nous.
+    </div>
+</div>
+
+<script>
+    // Ajout du style pour cacher l'input radio visuellement
+    const style = document.createElement('style');
+    style.innerHTML = `
+        .smiley-btn input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+    `;
+    document.head.appendChild(style);
+
+    // Script pour gérer la sélection des smileys et les inputs radio
+    document.querySelectorAll('.smiley-container').forEach(container => {
+        container.addEventListener('click', function(event) {
+            const clickedLabel = event.target.closest('.smiley-btn');
+            if (!clickedLabel) return; // Si ce n'est pas un label smiley-btn qui a été cliqué
+
+            // Désélectionne visuellement tous les autres smileys de la même question
+            container.querySelectorAll('.smiley-btn').forEach(btn => {
+                btn.classList.remove('selected');
+            });
+
+            // Sélectionne visuellement le smiley cliqué
+            clickedLabel.classList.add('selected');
+
+            // Coche le bouton radio caché à l'intérieur du label
+            const radioInput = clickedLabel.querySelector('input[type="radio"]');
+            if (radioInput) {
+                radioInput.checked = true;
+                // console.log(`Question ${container.dataset.questionName}: Réponse sélectionnée: ${radioInput.value}`); // Pour vérifier en console
+            }
+        });
+
+        // Gérer la sélection avec la touche Entrée pour l'accessibilité
+        container.querySelectorAll('.smiley-btn').forEach(btn => {
+            btn.addEventListener('keydown', function(event) {
+                if (event.key === 'Enter' || event.key === ' ') { // Espace ou Entrée
+                    event.preventDefault(); // Empêche le défilement de la page avec Espace
+                    this.click(); // Simule un clic
+                }
+            });
+        });
+    });
+
+    function envoyerAvis(event) {
+        event.preventDefault(); // Empêche de recharger la page
+        
+        // Ici, tu pourrais récupérer les données du formulaire
+        const formData = new FormData(document.getElementById('quizForm'));
+        const results = {};
+        for (let [name, value] of formData.entries()) {
+            results[name] = value;
+        }
+        console.log("Données du formulaire :", results); // Affiche les résultats dans la console du navigateur
+
+        // Cache le formulaire
+        document.getElementById('quizForm').style.display = 'none';
+        // Affiche le message de fin
+        document.getElementById('message-fin').style.display = 'block';
+    }
+</script>
+
+</body>
+</html>

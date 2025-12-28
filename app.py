@@ -5,7 +5,7 @@ import streamlit as st
 # ==============================================================================
 st.set_page_config(
     page_title="Mon GPS Emploi",
-    page_icon="🧭", # La boussole en émoji (pas besoin d'image)
+    page_icon="boussole_GPS_Emploi.jpg", # L'image de la boussole
     layout="centered"
 )
 
@@ -29,12 +29,17 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
+# --- RESTAURATION DE LA BANDEROLE ---
+try:
+    st.image("fond.png", use_container_width=True)
+except:
+    pass # Si l'image n'est pas là, ça ne plante pas
+
 st.title("🧭 MON GPS EMPLOI")
 st.write("Trouvez le métier qui matche avec vos compétences !")
 
 # ==============================================================================
 # 2. LE CERVEAU (Dictionnaire de correspondance FALC)
-# On associe tes nouvelles phrases simples aux fiches métiers officielles
 # ==============================================================================
 MAPPING_METIERS = {
     # --- BÂTIMENT ---
@@ -102,7 +107,7 @@ with st.container(border=True):
         competences = st.multiselect(
             "2️⃣ Cochez tout ce que vous savez faire :",
             LISTE_PAR_POLE[pole],
-            placeholder="Sélectionnez vos savoir-faire ici..." # <-- Ici on a mis du Français !
+            placeholder="Sélectionnez vos savoir-faire ici..."
         )
     else:
         competences = []
@@ -117,7 +122,7 @@ with st.container(border=True):
     # ==============================================================================
     if ville and competences:
         
-        # --- ÉTAPE A : DÉDOUBLONNAGE (Ta logique intelligente) ---
+        # --- ÉTAPE A : DÉDOUBLONNAGE ---
         metiers_identifies = {}
         
         for comp in competences:
@@ -154,11 +159,10 @@ with st.container(border=True):
 
                 # --- CORRECTIF MOBILE & LIENS ---
                 terme = details['search']
-                terme_url = terme.replace(" ", "+") # Le fix pour les espaces
+                terme_url = terme.replace(" ", "+")
                 ville_url = ville.replace(" ", "+")
 
                 # --- CORRECTIF AFFICHAGE BOUTONS ---
-                # Les boutons sont maintenant DANS la boucle, donc ils s'affichent pour CHAQUE métier
                 c1, c2, c3, c4 = st.columns(4)
                 
                 with c1:
